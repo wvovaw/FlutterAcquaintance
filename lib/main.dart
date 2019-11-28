@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Startup Name Generator',
             theme: ThemeData(
-              primaryColor: Color(0xFF32BF1C),
+              primaryColor: Color(0xFFFFDE03),
+              secondaryHeaderColor: Color(0xFF0336FF),
+              accentColor: Color(0xFFFF0266)
             ),
             home: RandomWords(),
           );
@@ -57,6 +59,7 @@ class RandomWordsState extends State<RandomWords> {
           return Scaffold(
             appBar: AppBar(
               title: Text('Favorite variants'),
+              backgroundColor: Theme.of(context).secondaryHeaderColor,
             ),
             body: ListView(children: divided,),
           );
